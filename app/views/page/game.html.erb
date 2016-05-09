@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('assets/wallpaper-06.jpg');">
+  <div class="container">
+  <div class="row">
+  <div class="title">
+    <div class="col-xs-6 col-xs-offset-3 text-center">
+      <h2>******** <strong>Find the longest word!</strong> ********</h2>
+    </div>
+    <div class="col-xs-6 col-xs-offset-3 text-center">
+      <h1 id="results"><%= @grid %></h1>
+    </div>
+    <div class="col-xs-6 col-xs-offset-3 text-center">
+      <form action="/score">
+        <div class="form-group">
+          <label for="attempt">Enter your best shot!</label>
+          <input class="form-control" type="text" id="attempt" name="attempt" placeholder="Type here">
+        </div>
+        <input type="submit" class="btn-primary btn " value="Submit attempt!">
+        <input type="hidden" name="start_time" value="<%= @start_time %>">
+        <input type="hidden" name="grid" value="<%= @grid %>">
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
+
